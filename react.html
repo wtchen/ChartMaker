@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="stylesheets/bootstrap.css"/>
+    <link rel="stylesheet" href="stylesheets/style.css"/>
+    <title></title>
+</head>
+<body>
+    <nav class="navbar navbar-default navbar-fixed-top">
+        <div class="container">
+            <div class="navbar-header">
+                <a class="navbar-brand" href="#">Chart Maker</a>
+            </div>
+        </div>
+    </nav>
+    <div class="container" id="canvasDiv">
+        <canvas id="myChart" width="300" height="300"></canvas>
+    </div>
+    <div class="container" id="myInput">
+
+    </div>
+    <br/>
+    <div class="container">
+        <a href="#" id="dlLink">Download JPG</a>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/1.0.2/Chart.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/react/0.13.3/react.min.js"></script>
+    <script src="//code.jquery.com/jquery-1.11.3.min.js"></script>
+    <script src="javascripts/bootstrap.js"></script>
+    <script src="reactProd.js"></script>
+    <script>
+        $("#dlLink").click(function(){
+            var win = window.open();
+            win.document.write("<img src='"+document.getElementById("myChart").toDataURL()+"'/>");
+        });
+    </script>
+</body>
+</html>

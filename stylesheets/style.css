@@ -1,0 +1,20 @@
+body {
+    padding-top: 50px;
+}
+
+li {
+    list-style-type: none;
+}
+
+label {
+    margin-right: 5px;
+}
+
+.form-group {
+    margin-right: 10px;
+}
+
+#canvasDiv {
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
